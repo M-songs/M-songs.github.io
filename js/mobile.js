@@ -34,9 +34,18 @@ define([], function(){
         $tag = document.getElementById("js-tagcloud");
         $aboutme = document.getElementById("js-aboutme");
         $friends = document.getElementById("js-friends");
+<<<<<<< HEAD
         var tagStr = $tag?'<span class="viewer-title">标签</span><div class="viewer-div tagcloud" id="js-mobile-tagcloud"></div>':"";
         var friendsStr = $friends?'<span class="viewer-title">友情链接</span><div class="viewer-div friends" id="js-mobile-friends"></div>':"";
         var aboutmeStr = $aboutme?'<span class="viewer-title">关于我</span><div class="viewer-div aboutme" id="js-mobile-aboutme"></div>':"";
+=======
+        function menuList(name) {
+            return $("link.menu-list").attr(name);
+        };
+        var tagStr = $tag?'<span class="viewer-title">'+ menuList("tags") + '</span><div class="viewer-div tagcloud" id="js-mobile-tagcloud"></div>':"";
+        var friendsStr = $friends?'<span class="viewer-title">'+ menuList("friends") + '</span><div class="viewer-div friends" id="js-mobile-friends"></div>':"";
+        var aboutmeStr = $aboutme?'<span class="viewer-title">'+ menuList("about") + '</span><div class="viewer-div aboutme" id="js-mobile-aboutme"></div>':"";
+>>>>>>> 40811fbc9f164bd54be186529eb865dbcfeeee64
 
         $viewer.innerHTML = '<div id="viewer-box">\
         <div class="viewer-box-l">\
@@ -108,6 +117,16 @@ define([], function(){
             touchEndTime = 0;
         }, false);
 
+<<<<<<< HEAD
+=======
+        $(".slider-trigger").click(function(){
+            show();
+        })
+        $(".viewer-box-r").click(function(){
+            hide();
+        })
+
+>>>>>>> 40811fbc9f164bd54be186529eb865dbcfeeee64
         //滚动样式
         var $overlay = $("#mobile-nav .overlay");
         var $header = $(".js-mobile-header");
@@ -129,6 +148,7 @@ define([], function(){
         }, false);
     };
 
+<<<<<<< HEAD
     var resetTags = function(){
         var tags = $(".tagcloud a");
         tags.css({"font-size": "12px"});
@@ -139,6 +159,8 @@ define([], function(){
         }
     }
 
+=======
+>>>>>>> 40811fbc9f164bd54be186529eb865dbcfeeee64
     return{
         init: function(){
             //构造函数需要的参数
